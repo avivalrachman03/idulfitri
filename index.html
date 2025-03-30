@@ -141,7 +141,7 @@ body {
       <img src="profil.png" alt="Foto Profil">
       <h4>Aviv Al Rachman</h4>
       <!-- <h5>Mengucapkan..</h5> -->
-      <h1>SELAMAT HARI RAYA IDUL FITRI 1444</h1>
+      <h1>SELAMAT HARI RAYA IDUL FITRI 1446</h1>
       <p>Mohon maaf lahir dan batin</p>
       <div class="social-links">
         <a href="https://api.whatsapp.com/send?phone=6285334851148"><i data-feather="message-circle"></i></a>
@@ -149,12 +149,15 @@ body {
         <a href="https://www.facebook.com/aviv.alrachman.7"><i data-feather="facebook"></i></a>
       </div>
     </div>
-    <audio controls autoplay="autoplay" loop class="audio">
+    <audio controls loop id="audio">
       <source src="https://islamiques.net/mxle/Takbiran-Suara-Merdu.mp3" type="audio/mp3">
     </audio>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 <script>
   feather.replace();
+  window.onload = function(){
+    document.getElementById("audio").play();
+  }
 </script>
   </body>
 </html>
