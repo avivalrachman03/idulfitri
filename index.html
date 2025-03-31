@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css">
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css"> -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
 
@@ -160,7 +160,7 @@ h5{
 }
 
 
-
+ 
     </style>
   </head>
   <body>
@@ -183,16 +183,17 @@ h5{
         <a href="https://www.facebook.com/aviv.alrachman.7"><i data-feather="facebook"></i></a>
       </div>
     </div>
-    <audio loop autoplay="true" id="audio">
-      <source src="./takbiran.mp3" type="audio/mp3">
-    </audio>
+    <audio autoplay loop  id="playAudio">
+      <source src="audio.mp3">
+  </audio>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 <script>
   feather.replace();
   // const audio = document.getElementById("audio");
-  // window.onload = function(){
+
+  // window.onload = function() {
   //   audio.play();
-  // }
+  // };
 
   const span = document.querySelector("span");
 
