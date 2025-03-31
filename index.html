@@ -130,6 +130,11 @@ body {
   cursor: pointer;
   font-family: 'Open Sans', sans-serif;
   margin: 10px 0px;
+  color: #333;
+}
+.rek span{
+  font-weight: bold;
+  
 }
 h5{
   font-family: 'Open Sans', sans-serif;
@@ -173,9 +178,8 @@ h5{
       <p>Mohon maaf lahir dan batin</p>
       <h5>kirim THR-nya ke sini ya.. <i data-feather="smile" class="smile"></i></h5>
       <div class="rek"> BCA -
-        <span >6690601646
-          <i data-feather="copy"  class="copy"></i>
-        </span>
+        <span >6690601646</span>
+        <i data-feather="copy"  class="copy"></i>
       </div>
       <div class="social-links">
         <a href="https://api.whatsapp.com/send?phone=6285334851148"><i data-feather="message-circle"></i></a>
@@ -195,20 +199,30 @@ h5{
   //   audio.play();
   // };
 
-  const span = document.querySelector("span");
+  // const span = document.querySelector("span");
+  // const copy = document.querySelector(".copy");
+  const copy_rek = document.querySelector(".rek");
 
-span.onclick = function() {
-  document.execCommand("copy");
+  // klipboardini langsung hardcode
+copy_rek.onclick = function() {
+  navigator.clipboard.writeText("6690601646");
   alert("Nomor rekening berhasil disalin");
-}
+  // console.log(navigator.clipboard.readText());
+};
 
-span.addEventListener("copy", function(event) {
-  event.preventDefault();
-  if (event.clipboardData) {
-    event.clipboardData.setData("text/plain", span.textContent);
-    console.log(event.clipboardData.getData("text"))
-  }
-});
+// span.onclick = function() {
+//   document.execCommand("copy");
+//   alert("Nomor rekening berhasil disalin");
+// }
+
+// // clipboard ini kalo ngambil dari isi element
+// span.addEventListener("copy", function(event) {
+//   event.preventDefault();
+//   if (event.clipboardData) {
+//     event.clipboardData.setData("text/plain", span.textContent);
+//     // console.log(event.clipboardData.getData("text"))
+//   }
+// });
 
 </script>
   </body>
