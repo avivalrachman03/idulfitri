@@ -10,14 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8Z7Q5YHZ0"></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8Z7Q5YHZ0"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
       gtag('config', 'G-N8Z7Q5YHZ0');
-    </script>
+    </script> -->
 
 
 
@@ -38,6 +38,7 @@ body {
       /* Style untuk card */
 .card {
   width: 400px;
+  height: 71%;
   margin: 50px auto;
   background-color: #fff;
   border-radius: 10px;
@@ -51,18 +52,6 @@ body {
   opacity: 0.96;
 }
 
-/* Style untuk card pada resolusi layar yang kecil */
-@media (max-width: 800px) {
-  .card {
-    width: 85%;
-    margin: 50px auto;
-    /* kode CSS lainnya */
-  }
-  body{
-    background-size: auto 100vh;
-    background-repeat: no-repeat;
-  }
-}
 
 /* Style untuk foto profil */
 .card img {
@@ -79,8 +68,8 @@ body {
   font-size: 24px;
   font-weight: bold;
   color: #333;
-  margin-bottom: 10px;
-  margin-top: 20px;
+  margin-bottom: 5px;
+  margin-top: 15px;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -106,9 +95,9 @@ body {
 /* Style untuk teks ucapan */
 .card p {
   font-size: 18px;
-  line-height: 1.5;
+  /* line-height: 1.5; */
   color: #666;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -133,26 +122,69 @@ body {
 .social-links a:hover {
   background-color: #ccc;
 }
+.rek{
+  background-color: #ccc;
+  padding: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  margin: 10px 0px;
+}
+h5{
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  margin-top: 0px;
+}
+.copy{
+  cursor: pointer;
+  margin-left: 5px;
+  padding: 0px 5px;
+  border-radius: 5px;
+  width: 16px;
+  height: 16px;
+}
+
+/* Style untuk card pada resolusi layar yang kecil */
+@media (max-width: 800px) {
+  .card {
+    width: 85%;
+    height: 80%;
+    margin: 50px auto;
+    /* kode CSS lainnya */
+  }
+  body{
+    background-size: auto 100vh;
+    background-repeat: no-repeat;
+  }
+}
+
+
 
     </style>
   </head>
   <body>
-    <iframe src="https://islamiques.net/mxle/Takbiran-Suara-Merdu.mp3" allow="autoplay" style="display:none" id="iframeAudio">
-    </iframe>
+    
     <div class="card">
       <img src="profil.png" alt="Foto Profil">
       <h4>Aviv Al Rachman</h4>
       <!-- <h5>Mengucapkan..</h5> -->
       <h1>SELAMAT HARI RAYA IDUL FITRI 1446</h1>
       <p>Mohon maaf lahir dan batin</p>
+      <h5>kirim THR-nya ke sini ya.. <i data-feather="smile" class="smile"></i></h5>
+      <div class="rek"> BCA -
+        <span >6690601646
+          <i data-feather="copy"  class="copy"></i>
+        </span>
+      </div>
       <div class="social-links">
         <a href="https://api.whatsapp.com/send?phone=6285334851148"><i data-feather="message-circle"></i></a>
         <a href="https://www.instagram.com/aviv_alrachman"><i data-feather="instagram"></i></a>
         <a href="https://www.facebook.com/aviv.alrachman.7"><i data-feather="facebook"></i></a>
       </div>
     </div>
-    <audio controls loop id="audio">
-      <source src="https://islamiques.net/mxle/Takbiran-Suara-Merdu.mp3" type="audio/mp3">
+    <audio loop id="audio">
+      <source src="https://islamiques.net/7ekx/Takbiran-Ustad-Jefri-Al-Bughori-(UJ).mp3" type="audio/mp3">
     </audio>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 <script>
@@ -160,6 +192,22 @@ body {
   window.onload = function(){
     document.getElementById("audio").play();
   }
+
+  const span = document.querySelector("span");
+
+span.onclick = function() {
+  document.execCommand("copy");
+}
+
+span.addEventListener("copy", function(event) {
+  event.preventDefault();
+  if (event.clipboardData) {
+    event.clipboardData.setData("text/plain", span.textContent);
+    console.log(event.clipboardData.getData("text"))
+  }
+});
+
 </script>
   </body>
 </html>
+
