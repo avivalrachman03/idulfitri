@@ -130,6 +130,28 @@
     width: 16px;
     height: 16px;
   }
+  .playPauseAudio{
+    position: fixed;
+    top: 80%;
+    right: 10px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #575af3;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 5px;
+    padding: 3px;
+    color: #ffffff;
+    /* border: 1px solid #6062fd; */
+  }
+  .playPauseAudio i{
+    padding: 0px;
+    border: 1px solid #6062fd;
+  }
   
   /* Style untuk card pada resolusi layar yang kecil */
   @media (max-width: 800px) {

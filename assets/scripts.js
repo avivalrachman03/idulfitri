@@ -1,31 +1,38 @@
 feather.replace();
-// const audio = document.getElementById("audio");
+const playPauseAudio = document.querySelector(".playPauseAudio");
+const play = document.querySelector(".play");
+const pause = document.querySelector(".pause");
+window.onload = function() {
+    
+    if (document.getElementById("playAudio").paused) {
+        play.style.display = "block";
+        pause.style.display = "none";
+    }else{
+        play.style.display = "none";
+        pause.style.display = "block";
+    }
+}
 
-// window.onload = function() {
-//   audio.play();
-// };
 
-// const span = document.querySelector("span");
-// const copy = document.querySelector(".copy");
+playPauseAudio.onclick = function() {
+    const audio = document.getElementById("playAudio");
+    if (audio.paused) {
+        audio.play();
+        pause.style.display = "block";
+        play.style.display = "none";
+    } else {
+        audio.pause();
+        play.style.display = "block";
+        pause.style.display = "none";
+    }
+};
+
 const copy_rek = document.querySelector(".rek");
 
-// klipboardini langsung hardcode
+// klipboar disini langsung hardcode
 copy_rek.onclick = function() {
 navigator.clipboard.writeText("6690601646");
 alert("Nomor rekening berhasil disalin");
 // console.log(navigator.clipboard.readText());
 };
 
-// span.onclick = function() {
-//   document.execCommand("copy");
-//   alert("Nomor rekening berhasil disalin");
-// }
-
-// // clipboard ini kalo ngambil dari isi element
-// span.addEventListener("copy", function(event) {
-//   event.preventDefault();
-//   if (event.clipboardData) {
-//     event.clipboardData.setData("text/plain", span.textContent);
-//     // console.log(event.clipboardData.getData("text"))
-//   }
-// });
