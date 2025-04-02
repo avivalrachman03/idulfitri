@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css"> -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
 
     <!-- Google tag (gtag.js)
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8Z7Q5YHZ0"></script>
@@ -23,155 +23,14 @@
 
     <title>Idul Fitri 1446</title>
     <style>
-      /* Tambahkan gaya CSS di sini */
-body {
-  /* kode warna biru yang elegan */
-  background-image: url('https://img.freepik.com/free-vector/ramadan-kareem-background_1302-17585.jpg?size=626&ext=jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* font-family: sans-serif; */
-  
-  margin: 0;
-  padding: 0;
-}
-
-      /* Style untuk card */
-.card {
-  width: 400px;
-  height: 71%;
-  margin: 50px auto;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  text-align: center;
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0.96;
-}
-
-
-/* Style untuk foto profil */
-.card img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center;
-  margin-bottom: 20px;
-}
-
-/* Style untuk judul */
-.card h1 {
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 5px;
-  margin-top: 15px;
-  font-family: 'Open Sans', sans-serif;
-}
-
-.card h4 {
-  font-size: 18px;
-  font-weight: bold;
-  color: #666;
-  margin-bottom: 10px;
-  margin-top: 5px;
-  border-bottom: 2px solid #ccc;
-  font-family: 'Roboto Slab', sans-serif;
-  border-radius: 5px;
-}
-
-.card h5 {
-  font-size: 15px;
-  line-height: 1.5;
-  color: #666;
-  margin-bottom: 0px;
-  margin-top: 1px;
-}
-
-/* Style untuk teks ucapan */
-.card p {
-  font-size: 18px;
-  /* line-height: 1.5; */
-  color: #666;
-  margin-bottom: 10px;
-  font-family: 'Open Sans', sans-serif;
-}
-
-/* Style untuk link ke media sosial */
-.social-links {
-  display: flex;
-  justify-content: center;
-}
-
-.social-links a {
-  display: block;
-  width: 65px;
-  height: 65px;
-  background-color: #eee;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 85px;
-  margin: 0 8px;
-  transition: background-color 0.3s ease;
-}
-
-.social-links a:hover {
-  background-color: #ccc;
-}
-.rek{
-  background-color: #ccc;
-  padding: 5px;
-  border-radius: 5px;
-  display: inline-block;
-  cursor: pointer;
-  font-family: 'Open Sans', sans-serif;
-  margin: 10px 0px;
-  color: #333;
-}
-.rek span{
-  font-weight: bold;
-  
-}
-h5{
-  font-family: 'Open Sans', sans-serif;
-  font-style: italic;
-  margin-top: 0px;
-}
-.copy{
-  cursor: pointer;
-  margin-left: 5px;
-  padding: 0px 5px;
-  border-radius: 5px;
-  width: 16px;
-  height: 16px;
-}
-
-/* Style untuk card pada resolusi layar yang kecil */
-@media (max-width: 800px) {
-  .card {
-    width: 85%;
-    height: auto;
-    margin: 50px auto;
-    /* kode CSS lainnya */
-  }
-  body{
-    background-size: auto 100vh;
-    background-repeat: no-repeat;
-  }
-}
-
-
+     
  
     </style>
   </head>
   <body>
     
     <div class="card">
-      <img src="profil.png" alt="Foto Profil">
+      <img src="./assets/profil.png" alt="Foto Profil">
       <h4>Aviv Al Rachman</h4>
       <!-- <h5>Mengucapkan..</h5> -->
       <h1>SELAMAT HARI RAYA IDUL FITRI 1446</h1>
@@ -187,44 +46,14 @@ h5{
         <a href="https://www.facebook.com/aviv.alrachman.7"><i data-feather="facebook"></i></a>
       </div>
     </div>
+    <div class="playPauseAudio">
+
+    </div>
     <audio autoplay loop  id="playAudio">
-      <source src="audio.mp3">
+      <source src="./assets/audio.mp3">
   </audio>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-<script>
-  feather.replace();
-  // const audio = document.getElementById("audio");
-
-  // window.onload = function() {
-  //   audio.play();
-  // };
-
-  // const span = document.querySelector("span");
-  // const copy = document.querySelector(".copy");
-  const copy_rek = document.querySelector(".rek");
-
-  // klipboardini langsung hardcode
-copy_rek.onclick = function() {
-  navigator.clipboard.writeText("6690601646");
-  alert("Nomor rekening berhasil disalin");
-  // console.log(navigator.clipboard.readText());
-};
-
-// span.onclick = function() {
-//   document.execCommand("copy");
-//   alert("Nomor rekening berhasil disalin");
-// }
-
-// // clipboard ini kalo ngambil dari isi element
-// span.addEventListener("copy", function(event) {
-//   event.preventDefault();
-//   if (event.clipboardData) {
-//     event.clipboardData.setData("text/plain", span.textContent);
-//     // console.log(event.clipboardData.getData("text"))
-//   }
-// });
-
-</script>
+<script src="assets/scripts.js"></script>
   </body>
 </html>
 
